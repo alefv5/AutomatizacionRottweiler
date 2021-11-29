@@ -22,11 +22,11 @@ When(/^I press the button "([^"]*)"$/) do |buttonName|
 #Then I get an error message for the username "Error: El nombre de usuario alejandra5@gmail.com no está registrado en este sitio. Si no estás seguro de tu nombre de usuario, prueba con tu dirección de correo electrónico en su lugar."
 Then(/^I get an error message for the username "([^"]*)"$/) do |errorMessage|
     page.has_content?(errorMessage)
-    sleep 2
   end
 
 #Then I get an error message for the password "Error: la contraseña que has introducido para la dirección de correo electrónico alejandrafv5@gmail.com no es correcta. ¿Has olvidado tu contraseña?"
 Then(/^I get an error message for the password "([^"]*)"$/) do |errorMessage|
     page.has_content?(errorMessage)
-    sleep 2
   end
+
+#Then I go to the homepage 

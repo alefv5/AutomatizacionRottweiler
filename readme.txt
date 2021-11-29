@@ -1,5 +1,5 @@
 To run the features run:
-cucumber --init
+cucumber --init --publish-quiet
 ...\features>cucumber \features iniciarSesion.feature --publish-quiet
 
 |

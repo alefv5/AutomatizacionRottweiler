@@ -3,14 +3,19 @@ Feature: Register for a paid course
     I want to take a paid course
     
     Scenario: Start a paid course successfully
-        Given I am logged into the rottweiler page
-        When I press "Cursos" button
-        And select "Como hacer milkshakes"
-        Then I go to the page with the information of the selected course
-        And I press button "Añadir al carrito"
+        Given I am on the login page
+        When I enter the username "alejandrafv5@gmail.com"
+        And I enter the password "alejandra1"
+        And I press the button "Acceder"
+        And I press Cursos
+        Then I select Como hacer milkshakes
+        And I press button Apuntarme
 
     Scenario: Confirm that the course was added to my shopping cart
-        Given I am logged into the rottweiler page
-        When I press logo button of shopping cart
-        Then I am looking for this course "Como hacer milkshakes"
+        Given I am on the login page
+        When I enter the username "alejandrafv5@gmail.com"
+        And I enter the password "alejandra1"
+        And I press the button "Acceder"
+        Then I press logo button of shopping cart
+        And I am looking for this course Como hacer milkshakes
     

@@ -46,3 +46,4 @@ end
 
 #When I enter the required filds
 #Then I get a message "Antes de que pueda iniciar sesión, debe confirmar su dirección de correo electrónico a través del correo electrónico que le acabamos de enviar."
+#Then I get a message "Nombre de Usuario ya se ha tomado." 

@@ -45,5 +45,33 @@ Then(/^I get the message because the passwords do not match "([^"]*)"$/) do |mes
 end
 
 #When I enter the required filds
-#Then I get a message "Antes de que pueda iniciar sesión, debe confirmar su dirección de correo electrónico a través del correo electrónico que le acabamos de enviar."
-#Then I get a message "Nombre de Usuario ya se ha tomado." 
+When(/^I enter the required filds$/) do |table|
+  data = table.rows_hash
+  data.each_pair do |key, value|
+    case key
+        when "Correo Electronico"
+            fill_in 'signup_email', :with => value
+        when "Contraseña"
+            fill_in 'signup_password', :with => value
+        when "Confirmar contraseña"
+            fill_in 'signup_password_confirm', :with => value
+        when "Nombre"
+            fill_in 'field_1', :with => value
+        when "Apellido"
+            fill_in 'field_2', :with => value
+        when "Nombre de usuario"
+            fill_in 'field_3', :with => value
+        end
+    end
+end 
+
+	
+#Then I get a message email "Antes de que pueda iniciar sesión, debe confirmar su dirección de correo electrónico a través del correo electrónico que le acabamos de enviar."
+Then(/^I get a message email "([^"]*)"$/) do |message|
+    page.has_content?(message)
+end
+
+#Then I get a message name taked "Nombre de Usuario ya se ha tomado."
+Then(/^I get a message name taked "([^"]*)"$/) do |message|
+    page.has_content?(message)
+end

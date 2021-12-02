@@ -41,9 +41,9 @@ When(/^I enter the required filds$/) do |table|
 end 
 
 	
-#Then I get a message email "Antes de que pueda iniciar sesión, debe confirmar su dirección de correo electrónico a través del correo electrónico que le acabamos de enviar."
+#Then I get a message : of all confirmation messages
 Then(/^I get a message "([^"]*)"$/) do |message|
-    page.has_content?(message)
+    expect(page).to have_content(message)
 end
 
 

@@ -8,20 +8,22 @@ Feature: Login to rottweiler Academy page
         When I enter the username "alejandrafv5@gmail.com"
         And I enter the password "alejandra1"
         And I press the button "Acceder"
-        Then I go to the homepage 
+        Then My name <Name> is on the home page
+        
+        Examples:
+        |Name|
+        |Monica|
 
-    Scenario: Login with username incorrect
+    Scenario Outline: Login with username incorrect
         Given I am on the login page
-        When I enter the username "alejandra5@gmail.com"
-        And I enter the password "alejandra1"
+        When I enter the username <email>
+        And I enter the password <password> 
         And I press the button "Acceder"
-        Then I get an error message for the username "Error: El nombre de usuario alejandra5@gmail.com no está registrado en este sitio. Si no estás seguro de tu nombre de usuario, prueba con tu dirección de correo electrónico en su lugar."
+        Then I get an error message <message>
 
-    Scenario: Login with password incorrect
-        Given I am on the login page
-        When I enter the username "alejandrafv5@gmail.com"
-        And I enter the password "alejandr1"
-        And I press the button "Acceder"
-        Then I get an error message for the password "Error: la contraseña que has introducido para la dirección de correo electrónico alejandrafv5@gmail.com no es correcta. ¿Has olvidado tu contraseña?" 
+        Examples:
+        |email                       ||password     ||message                                                                                                                                                                                    |
+        |"alejandra5@gmail.com"      ||"alejandra1" ||"Dirección de correo electrónico desconocida. Compruébala de nuevo o inténtalo con tu nombre de usuario."|
+        |"alejandrafv5@gmail.com"    ||"alejandr1"  ||"Error: la contraseña que has introducido para la dirección de correo electrónico alejandrafv5@gmail.com no es correcta. ¿Has olvidado tu contraseña?"                                     |
 
-    
+

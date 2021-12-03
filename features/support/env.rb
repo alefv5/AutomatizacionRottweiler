@@ -4,9 +4,9 @@ begin require 'rspec/expectations'; rescue LoadError; require 'spec/expectations
   require 'capybara/cucumber'
   require 'capybara-screenshot/cucumber'
   
-  #PTravel Settings
-  ENV['USER']="Pepazo"
-  ENV['PSW']="ILoveQA"
+  #Settings
+  ENV['USER']="alejandrafv5@gmail.com"
+  ENV['PSW']="alejandra1"
   
   Capybara.default_driver = :selenium
   
@@ -27,11 +27,8 @@ begin require 'rspec/expectations'; rescue LoadError; require 'spec/expectations
     end
   
   end
-  # Register various Selenium drivers
-  #CapybaraDriverRegistrar.register_selenium_driver(:internet_explorer)
-  #CapybaraDriverRegistrar.register_selenium_driver(:firefox)
   CapybaraDriverRegistrar.register_selenium_driver(:chrome)
   Capybara.run_server = false
-  #World(Capybara)
+
   
   

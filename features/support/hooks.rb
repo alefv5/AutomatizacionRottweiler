@@ -8,3 +8,8 @@ Before '@maximize' do
 page.driver.browser.manage.window.maximize
 end
 
+
+#Before do |Login with username and password correct|
+ # emailhook { 'alejan' }
+  #passwordhook { 'aleeeeee' }
+#end

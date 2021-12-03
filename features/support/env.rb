@@ -5,8 +5,8 @@ begin require 'rspec/expectations'; rescue LoadError; require 'spec/expectations
   require 'capybara-screenshot/cucumber'
   
   #PTravel Settings
-  ENV['USER']="Pepazo"
-  ENV['PSW']="ILoveQA"
+  ENV['USER']="alejandrafv5@gmail.com"
+  ENV['PSW']="alejandra1"
   
   Capybara.default_driver = :selenium
   

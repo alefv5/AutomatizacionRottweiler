@@ -32,7 +32,7 @@ Then(/^I get an error message "([^"]*)"$/) do |message|
   end
 
 #Then My name <Name> is on the home page
-
 Then(/^My name "([^"]*)" is on the home page$/) do |name|
   expect(page).to have_content(name)
+  sleep 5
 end

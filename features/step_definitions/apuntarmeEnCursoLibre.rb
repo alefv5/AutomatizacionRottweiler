@@ -1,8 +1,3 @@
-#And I select Curso básico de Robótica con Arduino
-Then(/^I select Curso básico de Robótica con Arduino$/) do
-    find(:xpath, '//div/div/ul[@class="bb-course-items grid-view bb-grid"]/li/div/div/h2/a[@title = "Curso básico de Robótica con Arduino"]').click
-end
-
 # And I press the button Inicio Curso
 Then(/^I press the button Inicio Curso$/) do
     find(:xpath, '//div/div[@class="bb-button-wrap"]/div/a[text()=" Inicio Curso "]').click
@@ -19,8 +14,8 @@ Then(/^I select Mis cursos$/) do
     sleep 2
 end
 
-#And I am looking for this course "Curso básico de Robótica con Arduino"
-Then(/^I am looking for this course Curso básico de Robótica con Arduino$/) do
-    find(:xpath, '//form/div/div/ul/li/div/div/h2/a[@title="Curso básico de Robótica con Arduino"]').should be_visible
+#And I am looking for this course <course>
+Then(/^I am looking for this course in Mis cursos "([^"]*)"$/) do |course|
+    find(:xpath, '//form/div/div/ul/li/div/div/h2/a', :text => course).should be_visible
     sleep 2
 end

@@ -15,3 +15,4 @@ Then(/^I press the button to delete the course Como hacer milkshakes$/) do
     sleep 2
 end
 
+

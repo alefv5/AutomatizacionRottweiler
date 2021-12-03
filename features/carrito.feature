@@ -24,7 +24,6 @@ Feature: Shopping cart of Academy page
         And I press the button "Acceder"
         Then I press logo button of shopping cart
         And I am looking for this course <course>
-        
 
     Examples:
         |course                                     |
@@ -35,18 +34,17 @@ Feature: Shopping cart of Academy page
         When I enter the email and password
         And I press the button "Acceder"
         Then I press logo button of shopping cart
-        And I press the button to delete the course Como hacer milkshakes
+        And I press the button to delete the course Como hacer milkshakes 
         And I press logo button of shopping cart
-        And I am looking for this course "Como hacer milkshakes"
-
+        
     Scenario: Confirm that there cannot be more than one of the same course in shopping cart
         Given I am on the login page
         When I enter the email and password
         And I press the button "Acceder"
         And I press Cursos
-        Then I select "Como hacer milkshakes"
+        Then I select "Curso completo de Photoshop desde Cero"
         And I press button Apuntarme
         And I press button Añadir al carrito
-        And I get a message " No puedes añadir otro «Como hacer milkshakes» a tu carrito.		"
+        And I get an error message "No puedes añadir otro «Curso completo de Photoshop desde Cero» a tu carrito."
     
   

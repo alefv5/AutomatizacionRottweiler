@@ -6,12 +6,12 @@ Feature: Register to rottweiler Academy page
     Scenario: Create an account with correct data
         Given  I am on the register page
         When I enter the required filds
-        |Correo electronico  | ale.bellota02@hotmail.com  |            
+        |Correo electronico  | ale.bellota04@hotmail.com  |            
         |Contraseña 	     | alejandra2                 |
         |Confirmar contraseña| alejandra2                 |
         |Nombre 	         | Alejandra                  |
         |Apellido            | Verastegui                 |	
-        |Nombre de usuario 	 | bellota2                   |
+        |Nombre de usuario 	 | bellota4                   |
         And I click on button "Crear una cuenta"
         Then I get a message "Antes de que pueda iniciar sesión, debe confirmar su dirección de correo electrónico a través del correo electrónico que le acabamos de enviar."
     

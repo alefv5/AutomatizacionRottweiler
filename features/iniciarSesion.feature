@@ -8,10 +8,10 @@ Feature: Login to rottweiler Academy page
         When I enter the email and password
         And I press the button "Acceder"
         Then My name <name> is on the home page
-        
-        Examples:
-        |name|
-        |Monica|
+
+    Examples:
+    |name|
+    |"Monica"|
 
     Scenario Outline: Login with username incorrect
         Given I am on the login page
